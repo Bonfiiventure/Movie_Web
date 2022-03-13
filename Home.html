@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/dark-onsen-css-components.min.css">
+        <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+        <title>Movie APP</title>
+    </head>
+    <body>
+        <ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="fn.load('home.html')" tappable>
+          Home
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('movies.html')" tappable>
+          Movies
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('tv-shows.html')" tappable>
+          Tv Shows
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('downloads.html')" tappable>
+          Downloads
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('favourites.html')" tappable>
+          Favourite
+        </ons-list-item>
+      </ons-list>
+    </ons-page >
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+
+<template id="home.html"  >
+  <ons-page id="home">
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+       Trending
+      </div>
+    </ons-toolbar>
+    <ons-speed-dail>
+    </ons-speed-dail>
+<ons-list id="movies_list">
+  <ons-list-item >
+
+ 
+      
+    <ons-col id="col_1" >
+      <div class="movie_thumbnail" onclick="fn.itemClick('col_1')">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTcyODM4NjYzOV5BMl5BanBnXkFtZTgwNzYzNzI0NjM@._V1_.jpg" />
+      </div>
+      <div class="movie_title"  id="movie_1_name" >The Gifted</div>
+    </ons-col>
+
+    <ons-col id="col_2" onclick="fn.itemClick('col_2')">
+      <div class="movie_thumbnail">
+        <img src="https://nothingbutgeek.com/wp-content/uploads/2017/10/NUP_180024_0005.jpg" />
+      </div>
+      <div class="movie_title" id="movie_2_name" >Blindspot</div>
+    </ons-col>
+
+    <ons-col id="col_3" onclick="fn.itemClick('col_3')">
+     <div class="movie_thumbnail">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/61gOi4WE9mL._SS500.jpg" />
+      </div>
+      <div class="movie_title" id="movie_3_name" >Godless</div>
+    </ons-col>
+
+  </ons-list-item>
+
+    </ons-list>
+
+  <div id="storage" >
+    
+  </div>
+
+  </ons-page>
+</template>
+
+
+<template id="movies.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+       <div class="right">
+        <ons-toolbar-button onclick="fn.back()">
+          <ons-icon icon="fa-filter"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+
+      <div class="center">
+        Movies
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="tv-shows.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+       <div class="right">
+        <ons-toolbar-button onclick="fn.back()">
+          <ons-icon icon="fa-filter"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Tv Shows
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="downloads.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Downloads
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="favourites.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Favourite
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="details.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.back()">
+          <ons-icon icon="fa-arrow-left"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+
+      <div class="center" id="Title">
+        Hello
+      </div>
+    </ons-toolbar>
+  </ons-page>
+
+</template>
+<script type = "text/javascript">
+    ons.notification.alert("Welcome");
+</script>
+    </body>
+</html>
